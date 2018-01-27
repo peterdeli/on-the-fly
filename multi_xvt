@@ -1,0 +1,11 @@
+#!/bin/ksh
+
+count=$1
+
+counter=0
+
+while [ $counter -lt $count ]; do
+	rxvt -display :0 -fn "Lucida Console-14" -tn rxvt-cygwin-native -e /bin/bash --login &
+	counter=$(( $counter + 1 ))
+	sleep 1
+done
